@@ -8,6 +8,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import { isLoggedIn } from "./utils/jwt";
+import store from "./store/store";
 
 
 import Login from './components/auth/Login';

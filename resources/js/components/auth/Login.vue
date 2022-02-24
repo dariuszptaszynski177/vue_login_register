@@ -80,7 +80,7 @@ export default {
                 })
                 .then(({ data }) => {
                     login(data);
-                    window.location.replace("/");
+                    window.location.replace("/home");
                 })
                 .catch(({ response }) => {
                     this.errors = getErrorsOrAlert(response);

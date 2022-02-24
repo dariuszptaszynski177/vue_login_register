@@ -28,7 +28,8 @@ Route::post('/login', 'App\Http\Controllers\Api\LoginController@login')->name('l
 Route::post('/register', 'App\Http\Controllers\Api\RegisterController@register')->name('register');
 
 
-Route::middleware( 'auth:api' )->group( function () {
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/user/get-logged-user', 'App\Http\Controllers\Api\UserController@getLoggedUser');
 Route::get('/home', 'App\Http\Controllers\Api\HomeController@home')->name('home');
 });
 
